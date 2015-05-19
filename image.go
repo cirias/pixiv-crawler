@@ -50,7 +50,15 @@ func (img Image) Format(format string, isDir bool) string {
 		format += path.Ext(u.Path)
 	}
 
-	format = strings.Replace(format, "/", "SLASH", -1)
+	format = strings.Replace(format, "/", "／", -1)
+	format = strings.Replace(format, "\", "＼", -1)
+	format = strings.Replace(format, ":", "：", -1)
+	format = strings.Replace(format, "*", "＊", -1)
+	format = strings.Replace(format, "?", "？", -1)
+	format = strings.Replace(format, "\"", "＂", -1)
+	format = strings.Replace(format, "<", "＜", -1)
+	format = strings.Replace(format, ">", "＞", -1)
+	format = strings.Replace(format, "|", "｜", -1)
 
 	return format
 }
