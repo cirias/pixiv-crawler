@@ -51,7 +51,7 @@ func (img Image) Format(format string, isDir bool) string {
 	}
 
 	format = strings.Replace(format, "/", "／", -1)
-	format = strings.Replace(format, "\", "＼", -1)
+	format = strings.Replace(format, "\\", "＼", -1)
 	format = strings.Replace(format, ":", "：", -1)
 	format = strings.Replace(format, "*", "＊", -1)
 	format = strings.Replace(format, "?", "？", -1)
