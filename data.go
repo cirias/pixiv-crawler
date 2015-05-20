@@ -8,6 +8,11 @@ import (
 	"strings"
 )
 
+type Certification struct {
+	username string
+	password string
+}
+
 type Author struct {
 	Id   string
 	Name string
