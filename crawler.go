@@ -184,11 +184,13 @@ func (c *Crawler) GetIllust(j Job) error {
 		attr := "data-src"
 		src, exists := doc.Find(selection).Attr(attr)
 		if !exists {
-			err := AttrError{
-				j.Route.Url,
-				selection,
-				attr}
-			PanicIf(err)
+			if n := doc.Find("div.works_display div.player").Length(); n == 0 {
+				err := AttrError{
+					j.Route.Url,
+					selection,
+					attr}
+				PanicIf(err)
+			}
 		} else {
 			img := Image{Id: 0, Path: src, Illust: illust, Referer: j.Route.Url}
 
