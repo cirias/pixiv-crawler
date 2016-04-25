@@ -16,7 +16,7 @@ const (
 	PIXIV_HOST  = "http://www.pixiv.net"
 	LOGIN_URL   = "https://www.pixiv.net/login.php"
 	AUTHOR_URL  = PIXIV_HOST + "/member_illust.php"
-	ILLUST_URL  = PIXIV_HOST + "/member_illust.php"
+	ILLUST_URL  = PIXIV_HOST + "/member_illust.php" 
 	ILLUST_SIZE = 20
 )
 
